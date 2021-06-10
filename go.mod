@@ -1,7 +1,7 @@
-module github.com/juangabrielsl1015/twittor.git
+// module github.com/juangabrielsl1015/twittor.git
 
-go 1.12
+// go 1.12
 
-require(
+// require(
 
-)
+// )

@@ -5,8 +5,6 @@ import (
 
 	"github.com/juangabrielsl1015/twittor.git/bd"
 	"github.com/juangabrielsl1015/twittor.git/handlers"
-	// "github.com/juangabrielsl1015/twittor/handlers"
-	// "github.com/juangabrielsl1015/twittor/bd"
 )
 
 func main() {

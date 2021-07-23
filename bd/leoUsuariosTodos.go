@@ -29,8 +29,11 @@ func LeoUsuariosTodos(ID string, page int64, search string, tipo string) ([]*mod
 		"nombre": bson.M{"$regex": `(?i)` + search},
 	}
 
+	fmt.Println(query)
+
 	cur, err := col.Find(ctx, query, findOptions)
 	if err != nil {
+		fmt.Println("X")
 		fmt.Println(err.Error())
 		return results, false
 	}
@@ -52,6 +55,10 @@ func LeoUsuariosTodos(ID string, page int64, search string, tipo string) ([]*mod
 		incluir = false
 
 		encontrado, err = ConsultoRelacion(r)
+		if err != nil {
+			fmt.Println(err.Error())
+			return results, false
+		}
 		if tipo == "new" && !encontrado {
 			incluir = true
 		}
